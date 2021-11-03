@@ -29,12 +29,14 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        //for(int i=0;i<2111111111;i++) {
+            homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+                @Override
+                public void onChanged(@Nullable String s) {
+                    textView.setText(s);
+                }
+            });
+        //}
         return root;
     }
 
